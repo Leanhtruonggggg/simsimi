@@ -28,7 +28,7 @@ npm test
 
 ```
 const sim = require('simsimi-api');
-const response = await sim.simtalktalk('Hi', 'en');
+const response = await sim.simtalk('Hi', 'en');
 console.log(response);
 ```
 
@@ -62,7 +62,7 @@ If it doesn't know how to answer, or text has emojis
 ## Arguments
 
 ```
-await sim.simtalktalk(text, language);
+await sim.simtalk(text, language);
 ```
 
 text: Actual text to ask, must be string.
