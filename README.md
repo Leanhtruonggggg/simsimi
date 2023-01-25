@@ -17,7 +17,7 @@ Before starting, make sure you've met the following requirements:
 Install latest version from NPM:
 
 ```
-npm i simsimi
+npm i simsimi-api
 ```
 
 ## Test package
@@ -27,7 +27,7 @@ npm test
 ## Usage
 
 ```
-const sim = require('simsimi');
+const sim = require('simsimi-api');
 const response = await sim.simtalktalk('Hi', 'en');
 console.log(response);
 ```
