@@ -47,7 +47,6 @@ Expects something like
     "ip": "2402:800:6215:ec7d:7963:c487:82dd:ae50"
 }
 ```
-Where origin_sentenced is uncensored response.
 
 If it doesn't know how to answer, or text has emojis
 ```
