@@ -63,7 +63,7 @@ If it doesn't know how to answer, or text has emojis
 ## Arguments
 
 ```
-await freesimi.talk(text, language, level, uid);
+await sim.simtalktalk(text, language);
 ```
 
 text: Actual text to ask, must be string.
