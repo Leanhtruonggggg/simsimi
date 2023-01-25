@@ -5,7 +5,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Leanhtruonggggg/simsimi?style=for-the-badge)
 
 
-## Free Simsimi Talk API Reverse Engineered from the App
+## Free Simsimi Talk API
 
 ## Prerequisites
 
