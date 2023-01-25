@@ -1,6 +1,6 @@
 {
-    "name": "simsimi",
-    "version": "1.0.0",
+    "name": "simsimi-api",
+    "version": "1.0.2",
     "description": "SimSimi Conversation API enables you to get SimSimi's response data.",
     "main": "./src/index.js",
     "scripts": {

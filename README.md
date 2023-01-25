@@ -27,9 +27,20 @@ npm test
 ## Usage
 
 ```
-const sim = require('simsimi-api');
-const response = await sim.simtalk('Hi', 'en');
-console.log(response);
+const simsimi = require('simsimi-api');
+
+(async () => {
+  try {
+    while (true) {
+        const response = await simsimi.simtalk('hi', 'en');
+        console.log(response);
+    }
+    
+  }
+  catch(e) {
+      console.error(e);
+    }
+})()
 ```
 
 Expects something like
