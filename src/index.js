@@ -1,11 +1,118 @@
 const axios = require('axios').default;
-
-const simtalk = (text, lang) => new Promise((resolve, reject) => {
-    if (typeof text !== 'string' || !text) reject(new Error('Text must be string'));
-    if (typeof lang !== 'string') reject(new Error('Lang must be string'));
+const simtalk = (text, language) => new Promise((resolve, reject) => {
+    if (typeof text !== 'string') {
+        console.error('Text must be string');
+        process.exit(1);
+    }
+    let lang = [
+        'vn',
+        'en',
+        'he',
+        'zh',
+        'ch',
+        'id',
+        'ko',
+        'ph',
+        'ru',
+        'ar',
+        'ms',
+        'es',
+        'pt',
+        'de',
+        'th',
+        'ja',
+        'fr',
+        'sv',
+        'tr',
+        'da',
+        'nb',
+        'it',
+        'nl',
+        'fi',
+        'ml',
+        'hi',
+        'kh',
+        'ca',
+        'ta',
+        'rs',
+        'mn',
+        'fa',
+        'pa',
+        'cy',
+        'hr',
+        'el',
+        'az',
+        'sw',
+        'te',
+        'pl',
+        'ro',
+        'si',
+        'fy',
+        'kk',
+        'cs',
+        'hu',
+        'lt',
+        'be',
+        'br',
+        'af',
+        'bg',
+        'is',
+        'uk',
+        'jv',
+        'eu',
+        'rw',
+        'or',
+        'al',
+        'bn',
+        'gn',
+        'kn',
+        'my',
+        'sk',
+        'gl',
+        'gu',
+        'ps',
+        'ka',
+        'et',
+        'tg',
+        'as',
+        'mr',
+        'ne',
+        'ur',
+        'uz',
+        'cx',
+        'hy',
+        'lv',
+        'sl',
+        'ku',
+        'mk',
+        'bs',
+        'ig',
+        'lb',
+        'mg',
+        'ny',
+        'sn',
+        'tt',
+        'yo',
+        'co',
+        'eo',
+        'ga',
+        'hm',
+        'hw',
+        'lo',
+        'mi',
+        'so',
+        'ug',
+        'am',
+        'gd'
+    ];
+    let checkLanguage = lang.includes(language) ? language: '';
+    if (typeof checkLanguage !== 'string' || !checkLanguage) {
+        console.error('Lang must be string or Lang Not Support');
+        process.exit(1);
+    }
     const params = new URLSearchParams();
     params.append('text', text);
-    params.append('lc', lang);
+    params.append('lc', checkLanguage);
     axios({
         method: 'POST',
         url: 'https://api.simsimi.vn/v2/simtalk',
@@ -14,5 +121,5 @@ const simtalk = (text, lang) => new Promise((resolve, reject) => {
 });
 
 module.exports = {
-    simsimi
+    simtalk
 }
