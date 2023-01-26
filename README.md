@@ -4,6 +4,16 @@
 ![GitHub issues](https://img.shields.io/github/issues/Leanhtruonggggg/simsimi?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/Leanhtruonggggg/simsimi?style=for-the-badge)
 
+<p align="center">
+  <img alt="@simsimi-api" style="width: 150px;" src="https://raw.githubusercontent.com/Leanhtruonggggg/simsimi/main/unnamed.png">
+</p>
+<div align="center">
+  <h3>SimSimi-Api</h3>
+  <p>Unofficial <a href="https://simsimi.vn">SimSimi</a> API <a href="https://nodejs.org">NodeJS</a><br>It's Free!</p>
+</div>
+<div align="center">
+  <a href="https://www.npmjs.com/package/simsimi-api">NPM</a> | <a href="https://github.com/Leanhtruonggggg/simsimi/">Repository</a> | <a href="https://t.me/simsimiapi">Report Bug</a>
+</div>
 
 ## Free Simsimi Talk API
 
@@ -12,7 +22,7 @@
 Before starting, make sure you've met the following requirements:
 * `Node.js v16.x`
 
-## Install
+## Installation 📑
 
 Install latest version from NPM:
 
@@ -29,21 +39,16 @@ npm test
 ```
 const simsimi = require('simsimi-api');
 
-(async () => {
-  try {
-    while (true) {
-        const response = await simsimi.simtalk('hi', 'en');
-        console.log(response);
-    }
-    
-  }
-  catch(e) {
-      console.error(e);
-    }
-})()
+function sim(message, language) {
+  simsimi.simtalk(message, language).then((response) => {
+    console.log(response);
+  });
+}
+
+sim("hi", "en");
 ```
 
-Expects something like
+## Response 📨
 ```
 {
     "status": "success",
